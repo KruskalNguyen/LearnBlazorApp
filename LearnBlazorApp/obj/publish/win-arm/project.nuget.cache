@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "XLG0aQETACbb70OhXsnjrgS5KL5bo2ab1rPy7WXmrGzGi80lWpcwI/QkXemWt5VpQERyxwGkxAHdYNiLv/3ryQ==",
+  "success": true,
+  "projectFilePath": "D:\\nam4\\dotnet_project\\LearnBlazorApp\\LearnBlazorApp\\LearnBlazorApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\KHANG\\.nuget\\packages\\microsoft.netcore.app.runtime.win-arm\\6.0.14\\microsoft.netcore.app.runtime.win-arm.6.0.14.nupkg.sha512",
+    "C:\\Users\\KHANG\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-arm\\6.0.14\\microsoft.aspnetcore.app.runtime.win-arm.6.0.14.nupkg.sha512"
+  ],
+  "logs": []
+}

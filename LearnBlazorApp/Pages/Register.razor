@@ -1,0 +1,55 @@
+﻿@page "/register"
+@using System.Text.Json;
+@using LearnBlazorApp.ModelView;
+@inject HttpClient httpClient
+<h3>Register</h3>
+
+<input placeholder="First Name" @bind="signUp.FirstName" />
+<br />
+<input style="margin-top: 10px" placeholder="Last Name" @bind="signUp.LastName" />
+<br />
+<input style="margin-top: 10px" placeholder="Email" @bind="signUp.Email" />
+<br />
+<input style="margin-top: 10px" type="password" placeholder="password" @bind="signUp.Password" />
+<br />
+<input style="margin-top: 10px" type="password" placeholder="re-password" @bind="signUp.ConfirmPassword" />
+<br />
+<button style="margin-top: 10px" @onclick="register">
+    summit
+</button>
+@if(errors != null)
+    foreach (var error in errors)
+    {
+        foreach (var message in error.Value)
+        {
+            <h1 style="color:@color">@error.Key: @message</h1>
+        }
+    }
+<h1 style="color:@color">@status</h1>
+
+
+@code {
+    private SignUp signUp = new SignUp();
+    private string? status;
+    private string? color;
+    private Dictionary<string, List<string>>? errors;
+
+    private async Task register()
+    {
+        var response = await httpClient.PostAsJsonAsync("/api/account/signup", signUp);
+
+        if (response.IsSuccessStatusCode)
+        {
+            status = "Sussess";
+            color = "forestgreen";
+        }
+        else
+        {
+            var errorContent = await response.Content.ReadAsStringAsync();
+            var errorResponse = JsonSerializer.Deserialize<ErrorResponse>(errorContent);
+            errors = errorResponse.errors;
+
+            color = "red";
+        }
+    }
+}

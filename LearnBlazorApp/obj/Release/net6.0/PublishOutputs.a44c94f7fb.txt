@@ -1,0 +1,7 @@
+D:\nam4\dotnet_project\LearnBlazorApp\LearnBlazorApp\obj\Release\net6.0\PubTmp\Out\LearnBlazorApp.exe
+D:\nam4\dotnet_project\LearnBlazorApp\LearnBlazorApp\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+D:\nam4\dotnet_project\LearnBlazorApp\LearnBlazorApp\obj\Release\net6.0\PubTmp\Out\appsettings.json
+D:\nam4\dotnet_project\LearnBlazorApp\LearnBlazorApp\obj\Release\net6.0\PubTmp\Out\LearnBlazorApp.dll
+D:\nam4\dotnet_project\LearnBlazorApp\LearnBlazorApp\obj\Release\net6.0\PubTmp\Out\LearnBlazorApp.deps.json
+D:\nam4\dotnet_project\LearnBlazorApp\LearnBlazorApp\obj\Release\net6.0\PubTmp\Out\LearnBlazorApp.runtimeconfig.json
+D:\nam4\dotnet_project\LearnBlazorApp\LearnBlazorApp\obj\Release\net6.0\PubTmp\Out\LearnBlazorApp.pdb

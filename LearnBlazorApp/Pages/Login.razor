@@ -1,0 +1,37 @@
+﻿@page "/Login"
+@using LearnBlazorApp.ModelView;
+@inject HttpClient httpClient
+
+<h3>Login</h3>
+
+<input placeholder="username" @bind="signIn.Email"/>
+<br />  
+<input style="margin-top: 10px" type="password" placeholder="password" @bind="signIn.Password"/>
+<br />
+<button style="margin-top: 10px" @onclick="SignIn">
+    summit
+</button>
+
+<h1 style="color:@color">@status</h1>
+
+@code {
+    private SignIn signIn = new SignIn();
+    private string? status;
+    private string? color;
+
+    private async Task SignIn()
+    {
+        var response = await httpClient.PostAsJsonAsync("/api/account/signin", signIn);
+
+        if (response.IsSuccessStatusCode)
+        {
+            status = "Sussess";
+            color = "forestgreen";
+        }
+        else
+        {
+            status = "Wrong";
+            color = "red";
+        }
+    }
+}
